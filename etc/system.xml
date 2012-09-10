@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <ves translate="label">
+            <label>VnEcoms</label>
+            <sort_order>400</sort_order>
+        </ves>
+    </tabs>
+    
+    <sections>
+        <autocomplete translate="label" module="autocomplete">
+            <label>Search autocomplete</label>
+            <tab>ves</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>                
+                <config>
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>						
+						<min_char>
+                            <label>Minimum character to start search</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </min_char>
+                        
+                        <show_product>
+                            <label>Show product</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Number of product to display</comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_product>
+                        
+                        <suggest_window_width>
+                            <label>Suggest window width (px)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </suggest_window_width>
+                        
+                        <show_image>
+                            <label>Show thumbnail product</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_image>
+                        
+                        <thumbnail_height>
+                            <label>Thumbnail product height (px)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumbnail_height>
+                        
+                        <thumbnail_width>
+                            <label>Thumbnail product width (px)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumbnail_width>
+                        
+                        <query_delay>
+                            <label>Query delay</label>
+                            <comment>In miliseconds , eg 500 mean 0.5s</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </query_delay>
+                        
+                        <result_header>
+                            <label>Result header text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </result_header>
+                        
+                        <result_footer>
+                            <label>Result footer text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </result_footer>
+                        
+                        <desc_char>
+                            <label>Shortdescription characters</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Maximum characters to display on shortdescription</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </desc_char>
+                        
+                        <new_window>
+                            <label>New tab</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Open new tab in product after search</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </new_window>
+                    </fields>
+                </config>
+			</groups>
+        </autocomplete>
+    </sections>
+</config>

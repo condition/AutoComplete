@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <autocomplete translate="title" module="autocomplete">
+                                            <title>Search Autocomplete</title>
+                                        </autocomplete>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+</config>
