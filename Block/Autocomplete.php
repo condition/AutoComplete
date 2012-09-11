@@ -5,8 +5,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	protected $_suggestData = null;
 	
 	
-	public function __construct()
-	{
+	public function __construct() {
 		parent::__construct();
 		$this->setTemplate('ves_autocomplete/autocomplete.phtml');
 	}
@@ -127,7 +126,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @return array
 	 */
 
-	protected function preKmp($p) {
+	public function preKmp($p) {
 		$kmpNext = array();
 		$kmpNext[0] = -1;
 		$i = 0;$m = strlen($p);
@@ -156,7 +155,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @param string $p pattern
 	 * @return int
 	 */
-	protected function kmpMatching($s,$p) {
+	public function kmpMatching($s,$p) {
 		$i = 0;$j = 0;
 		$result_count = 0;	//number of lan xuat hien pattern trong string
 	
@@ -196,7 +195,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @return integer
 	 */
 	
-	protected function pointing($count, $type = "name") {
+	public function pointing($count, $type = "name") {
 		$point = 0;
 		if($count == 0) return 0;
 	
@@ -214,7 +213,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @param string $pattern string to search
 	 * @return number
 	 */
-	protected function calculator($product, $pattern) {
+	public function calculator($product, $pattern) {
 		$point = 0;
 		$strName = $product['name'];
 		$strDesc = $product['shortdescription'];
@@ -235,7 +234,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @param string $subkey key of sub array on father array
 	 * @return array
 	 */
-	protected function subvalSortReserve($a,$subkey) {
+	public function subvalSortReserve($a,$subkey) {
 		foreach($a as $k=>$v) {
 			$b[$k] = strtolower($v[$subkey]);
 		}
@@ -253,7 +252,7 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @param string $haystack father string
 	 * @return string
 	 */
-	protected function highlight($needle, $haystack){
+	public function highlight($needle, $haystack){
 		$ind = stripos($haystack, $needle);
 		$len = strlen($needle);
 		if($ind !== false){
