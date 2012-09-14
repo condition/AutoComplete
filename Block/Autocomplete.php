@@ -269,18 +269,19 @@ class VES_AutoComplete_Block_Autocomplete extends Mage_Core_Block_Template
 	 * @return array
 	 */
 	public function getConfigData($config = NULL) {
-		$this->_config['thumbnail_height'] 			= Mage::getStoreConfig('autocomplete/config/thumbnail_height',Mage::app()->getStore());
-		$this->_config['thumbnail_width'] 			= Mage::getStoreConfig('autocomplete/config/thumbnail_width',Mage::app()->getStore());
-		$this->_config['query_delay'] 			= Mage::getStoreConfig('autocomplete/config/query_delay',Mage::app()->getStore());
-		$this->_config['result_footer'] 		= Mage::getStoreConfig('autocomplete/config/result_footer',Mage::app()->getStore());
-		$this->_config['result_header'] 		= Mage::getStoreConfig('autocomplete/config/result_header',Mage::app()->getStore());
-		$this->_config['new_window'] 			= Mage::getStoreConfig('autocomplete/config/new_window',Mage::app()->getStore());
-		$this->_config['show_product'] 			= Mage::getStoreConfig('autocomplete/config/show_product',Mage::app()->getStore());
-		$this->_config['suggest_window_width'] 	= Mage::getStoreConfig('autocomplete/config/suggest_window_width',Mage::app()->getStore());
-		$this->_config['min_char'] 				= Mage::getStoreConfig('autocomplete/config/min_char',Mage::app()->getStore());
-		$this->_config['show_image'] 			= Mage::getStoreConfig('autocomplete/config/show_image',Mage::app()->getStore());
-		$this->_config['desc_char'] 			= Mage::getStoreConfig('autocomplete/config/desc_char',Mage::app()->getStore());
+// 		$this->_config['thumbnail_height'] 			= Mage::getStoreConfig('autocomplete/config/thumbnail_height',Mage::app()->getStore());
+// 		$this->_config['thumbnail_width'] 			= Mage::getStoreConfig('autocomplete/config/thumbnail_width',Mage::app()->getStore());
+// 		$this->_config['query_delay'] 			= Mage::getStoreConfig('autocomplete/config/query_delay',Mage::app()->getStore());
+// 		$this->_config['result_footer'] 		= Mage::getStoreConfig('autocomplete/config/result_footer',Mage::app()->getStore());
+// 		$this->_config['result_header'] 		= Mage::getStoreConfig('autocomplete/config/result_header',Mage::app()->getStore());
+// 		$this->_config['new_window'] 			= Mage::getStoreConfig('autocomplete/config/new_window',Mage::app()->getStore());
+// 		$this->_config['show_product'] 			= Mage::getStoreConfig('autocomplete/config/show_product',Mage::app()->getStore());
+// 		$this->_config['suggest_window_width'] 	= Mage::getStoreConfig('autocomplete/config/suggest_window_width',Mage::app()->getStore());
+// 		$this->_config['min_char'] 				= Mage::getStoreConfig('autocomplete/config/min_char',Mage::app()->getStore());
+// 		$this->_config['show_image'] 			= Mage::getStoreConfig('autocomplete/config/show_image',Mage::app()->getStore());
+// 		$this->_config['desc_char'] 			= Mage::getStoreConfig('autocomplete/config/desc_char',Mage::app()->getStore());
 		
+		$this->_config = Mage::getStoreConfig('autocomplete/config',Mage::app()->getStore());
 		if($config == NULL) return $this->_config;
 		else return $this->_config[$config];
 	}
